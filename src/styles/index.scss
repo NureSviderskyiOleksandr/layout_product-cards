@@ -1,3 +1,131 @@
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap';
+
 body {
   margin: 0;
+}
+
+.product-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 200px;
+  border: 1px solid #F3F3F3;
+  border-radius: 5px;
+  padding: 16px;
+
+  align-items: center;
+
+  &__image {
+    background-image: url('../images/imac.jpeg');
+    background-size: cover;
+    background-position: center;
+    margin-top: 16px;
+    margin-bottom: 40px;
+    width: 160px;
+    height: 134px;
+
+  }
+
+  &__title {
+    font-size: 12px;
+    line-height: 18px;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    margin-bottom: 4px;
+    color: #060B35;
+  }
+
+  &__code{
+    align-self: flex-start;
+    font-size: 10px;
+    line-height: 14px;
+    font-family: Roboto, sans-serif;
+    color: #616070;
+    font-weight: 400;
+    margin-bottom: 16px;
+  }
+
+  &__reviews {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__stars{
+      display: flex;
+
+      &__star {
+        background-image: url(../images/star.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 16px;
+        height: 16px;
+        margin-right: 4px;
+
+        &:nth-child(-n + 4) {
+          background-image: url(../images/star-active.svg);
+        }
+      }
+    }
+
+    &__review-count {
+      font-family: Roboto, sans-serif;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 14px;
+      color: #060B35;
+    }
+
+    margin-bottom: 24px;
+  }
+
+  &__price {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__value {
+      font-family: Roboto, sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      color: #060B35;
+    }
+
+    &__title {
+      font-family: Roboto, sans-serif;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: #616070;
+    }
+
+    margin-bottom: 16px;
+  }
+
+  &__button {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 166px;
+    height: 40px;
+    background-color: #00ACDC;
+    border-radius: 5px;
+
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: #FFF;
+      color:#00ACDC;
+      border: 1px solid #00ACDC;
+    }
+  }
 }
