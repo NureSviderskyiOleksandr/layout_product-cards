@@ -1,30 +1,33 @@
 @import 'https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap';
+@import 'variables';
 
 body {
   margin: 0;
 }
 
-.product-card {
+p {
+  margin: 0;
+}
+
+.card {
   position: relative;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   width: 200px;
-  border: 1px solid #F3F3F3;
+  border: 1px solid $border-color;
   border-radius: 5px;
   padding: 16px;
-
   align-items: center;
 
   &__image {
     background-image: url('../images/imac.jpeg');
-    background-size: cover;
+    background-size: 160px 134px;
     background-position: center;
     margin-top: 16px;
     margin-bottom: 40px;
     width: 160px;
     height: 134px;
-
   }
 
   &__title {
@@ -33,51 +36,50 @@ body {
     font-family: Roboto, sans-serif;
     font-weight: 500;
     margin-bottom: 4px;
-    color: #060B35;
+    color: $main-color;
   }
 
-  &__code{
+  &__code {
     align-self: flex-start;
     font-size: 10px;
     line-height: 14px;
     font-family: Roboto, sans-serif;
-    color: #616070;
+    color: $sub-color;
     font-weight: 400;
     margin-bottom: 16px;
   }
 
-  &__reviews {
+  &__rating {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    &__stars{
-      display: flex;
-
-      &__star {
-        background-image: url(../images/star.svg);
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 16px;
-        height: 16px;
-        margin-right: 4px;
-
-        &:nth-child(-n + 4) {
-          background-image: url(../images/star-active.svg);
-        }
-      }
-    }
-
-    &__review-count {
-      font-family: Roboto, sans-serif;
-      font-weight: 400;
-      font-size: 10px;
-      line-height: 14px;
-      color: #060B35;
-    }
-
     margin-bottom: 24px;
+  }
+
+  .stars {
+    display: flex;
+    align-items: center;
+  }
+
+  .stars__star {
+    background-image: url(../images/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+
+    &:nth-child(-n + 4) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+
+  &__count {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    color: $main-color;
   }
 
   &__price {
@@ -85,47 +87,46 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
 
-    &__value {
-      font-family: Roboto, sans-serif;
-      font-weight: 700;
-      font-size: 16px;
-      line-height: 18px;
-      color: #060B35;
-    }
+  &__price-value {
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: $main-color;
+  }
 
-    &__title {
-      font-family: Roboto, sans-serif;
-      font-weight: 400;
-      font-size: 12px;
-      line-height: 18px;
-      color: #616070;
-    }
-
-    margin-bottom: 16px;
+  &__price-label {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: $sub-color;
   }
 
   &__button {
+    margin-top: 16px;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 166px;
     height: 40px;
-    background-color: #00ACDC;
+    background-color: $button-color;
     border-radius: 5px;
 
     font-family: Roboto, sans-serif;
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
-    color: #FFFFFF;
+    color: #fff;
     text-transform: uppercase;
 
     &:hover {
-      background-color: #FFF;
-      color:#00ACDC;
-      border: 1px solid #00ACDC;
+      background-color: #fff;
+      color: $button-color;
+      border: 1px solid $button-color;
     }
   }
 }
